@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="fundo-home">
     <v-row>
       <v-col>
         <v-card class="pa-5" elevation="5">
@@ -18,3 +18,7 @@ export default {
   name: "HomePage",
 };
 </script>
+<style scoped>
+.fundo-home {
+}
+</style>
