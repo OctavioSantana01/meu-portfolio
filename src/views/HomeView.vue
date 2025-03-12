@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <v-container>
+    <v-row>
+      <v-col>
+        <v-card class="pa-5" elevation="5">
+          <v-card-title>Bem-vindo ao meu portfólio!</v-card-title>
+          <v-card-text>
+            Este é um exemplo de página usando Vue 3 e Vuetify.
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-export default Vue.extend({
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-});
+<script>
+export default {
+  name: "HomePage",
+};
 </script>
