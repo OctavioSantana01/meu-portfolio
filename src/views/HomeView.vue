@@ -31,14 +31,14 @@ export default {
 .fundo-transparente h1 {
   font-size: 2rem;
   margin-top: 10px;
-  margin: 10px 0;
+  margin-right: 105px;
   font-weight: 300;
 }
 
 .fundo-transparente p {
   font-size: 5rem;
   margin-top: 15px;
-  margin: 15px 0;
+  margin-right: 105px;
 }
 .fundo-transparente {
   display: flex;
