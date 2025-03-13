@@ -1,15 +1,9 @@
 <template>
-  <v-container class="fundo-home">
-    <v-row>
-      <v-col>
-        <v-card class="pa-5" elevation="5">
-          <v-card-title>Bem-vindo ao meu portfólio!</v-card-title>
-          <v-card-text>
-            Este é um exemplo de página usando Vue 3 e Vuetify.
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+  <v-container fluid class="fundo-home pa-0 ma-0">
+    <div class="fundo-transparente">
+      <h1>Bem-vindo</h1>
+      <p>Desenvolvedor Full Stack</p>
+    </div>
   </v-container>
 </template>
 
@@ -18,7 +12,39 @@ export default {
   name: "HomePage",
 };
 </script>
+
 <style scoped>
 .fundo-home {
+  height: calc(100vh - 64px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/images/portfolio.png);
+  background-size: cover;
+  background-position: center;
+}
+.fundo-transparente h1,
+.fundo-transparente p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+.fundo-transparente h1 {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+.fundo-transparente p {
+  font-size: 5rem;
+  margin-top: 15px;
+  margin: 15px 0;
+}
+.fundo-transparente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 </style>
