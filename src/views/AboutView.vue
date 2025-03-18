@@ -1,8 +1,116 @@
 <template>
-  <v-container fluid class="fundo-home pa-0 ma-0">
-    <div class="textos">
-      <h1>Sobre</h1>
-    </div>
+  <v-container>
+    <v-row>
+      <v-col cols="12" md="3" sm="12" xs="12">
+        <v-sheet rounded shaped>
+          <v-card class="scroll-card mx-auto background-card">
+            <v-card-text>
+              <v-row>
+                <v-col md="12" sm="12" xs="12" class="d-flex justify-md-center">
+                  <v-avatar color="success" size="8rem">
+                    <img :src="require('@/assets/images/perfil.png')" />
+                  </v-avatar>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col class="d-flex justify-md-center">
+                  <h2>Octávio Santana</h2>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col class="d-flex justify-md-center">
+                  <h3>25 Anos</h3>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col>
+                  <v-list two-line color="customGray">
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon color="black"> mdi-map-marker </v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-content>
+                        <v-list-item-title>
+                          {{ "Cidade" }}
+                        </v-list-item-title>
+                        <v-list-item-subtitle>
+                          {{ "Passos/MG" }}
+                        </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-list>
+                  <v-divider inset></v-divider>
+                  <v-list two-line color="customGray">
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon color="black"> mdi-phone </v-icon>
+                      </v-list-item-icon>
+
+                      <v-list-item-content>
+                        <v-list-item-title>
+                          {{ "Celular" }}
+                        </v-list-item-title>
+                        <v-list-item-subtitle>
+                          {{ "(35) 999255990" }}
+                        </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon color="black"> mdi-email </v-icon>
+                      </v-list-item-icon>
+
+                      <v-list-item-content>
+                        <v-list-item-title>
+                          {{ "E-mail" }}
+                        </v-list-item-title>
+                        <v-list-item-subtitle>
+                          {{ "octaviossantana@gmail.com" }}
+                        </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon color="black">mdi-school </v-icon>
+                      </v-list-item-icon>
+
+                      <v-list-item-content>
+                        <v-list-item-title>
+                          {{ "Formação" }}
+                        </v-list-item-title>
+                        <v-list-item-subtitle>
+                          {{ "Bacharel em Ciência da Computação" }}
+                        </v-list-item-subtitle>
+                        <v-list-item-subtitle>
+                          {{ "Pós Graduando em Engenharia de Software" }}
+                        </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon color="black">mdi-code-tags </v-icon>
+                      </v-list-item-icon>
+
+                      <v-list-item-content>
+                        <v-list-item-title>
+                          {{ "Área de Atuação" }}
+                        </v-list-item-title>
+                        <v-list-item-subtitle>
+                          {{ "Desenvolvedor Full Stack" }}
+                        </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-list>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-sheet>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 <script>
@@ -10,3 +118,15 @@ export default {
   name: "AboutPage",
 };
 </script>
+<style scoped>
+.scroll-card {
+  scrollbar-width: thin;
+  max-height: calc(100vh - 73px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.background-card {
+  background-color: #dde1e7;
+}
+</style>

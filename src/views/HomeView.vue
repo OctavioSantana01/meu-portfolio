@@ -36,7 +36,7 @@ export default {
 
   computed: {
     mostrarMensagemSugestao() {
-      return "Clique aqui para saber mais sobre mim";
+      return "Clique para saber mais sobre mim";
     },
   },
 
