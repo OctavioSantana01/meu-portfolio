@@ -1,5 +1,14 @@
 <template>
   <v-container>
+    <v-overlay :value="loading ? 'success' : null" :disabled="loading">
+      <v-progress-circular
+        indeterminate
+        :rotate="360"
+        :size="100"
+        :width="10"
+        color="black"
+      />
+    </v-overlay>
     <v-row>
       <v-col cols="12" md="3" sm="12" xs="12">
         <v-sheet rounded shaped>
@@ -116,6 +125,17 @@
 <script>
 export default {
   name: "AboutPage",
+
+  data() {
+    return {
+      loading: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
+  },
 };
 </script>
 <style scoped>
@@ -126,6 +146,7 @@ export default {
   overflow-x: hidden;
   height: 100%;
 }
+
 .background-card {
   background-color: #dde1e7;
 }
