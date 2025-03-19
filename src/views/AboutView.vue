@@ -12,7 +12,7 @@
     <v-row>
       <v-col cols="12" md="3" sm="12" xs="12">
         <v-sheet rounded shaped>
-          <v-card class="scroll-card mx-auto background-card">
+          <v-card class="scroll-card">
             <v-card-text>
               <v-row>
                 <v-col md="12" sm="12" xs="12" class="d-flex justify-md-center">
@@ -112,12 +112,74 @@
                         </v-list-item-subtitle>
                       </v-list-item-content>
                     </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list two-line color="customGray">
+                      <v-list-item>
+                        <v-list-item-icon>
+                          <v-icon color="black"> mdi-github </v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                          <v-list-item-title>
+                            {{ "Github" }}
+                          </v-list-item-title>
+                          <v-list-item-subtitle>
+                            <a
+                              href="https://github.com/OctavioSantana01"
+                              target="_blank"
+                              rel="noopener"
+                              style="color: inherit; text-decoration: none"
+                            >
+                              OctavioSantana01(Pessoal)
+                            </a>
+                          </v-list-item-subtitle>
+                          <v-list-item-subtitle>
+                            <a
+                              href="https://github.com/OctavioSantanasoitic"
+                              target="_blank"
+                              rel="noopener"
+                              style="color: inherit; text-decoration: none"
+                            >
+                              OctavioSantanasoitic(Profissional)
+                            </a>
+                          </v-list-item-subtitle>
+                        </v-list-item-content>
+                      </v-list-item>
+                      <v-divider></v-divider>
+                    </v-list>
+                    <v-list two-line color="customGray">
+                      <v-list-item>
+                        <v-list-item-icon>
+                          <v-icon color="black"> mdi-linkedin </v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                          <v-list-item-title>
+                            {{ "Linkedin" }}
+                          </v-list-item-title>
+                          <v-list-item-subtitle>
+                            <a
+                              href="https://www.linkedin.com/in/octavio-santana-6003141a7/"
+                              target="_blank"
+                              rel="noopener"
+                              style="color: inherit; text-decoration: none"
+                            >
+                              Octavio Santana
+                            </a>
+                          </v-list-item-subtitle>
+                        </v-list-item-content>
+                      </v-list-item>
+                    </v-list>
                   </v-list>
                 </v-col>
               </v-row>
             </v-card-text>
           </v-card>
         </v-sheet>
+      </v-col>
+      <v-col cols="12" md="9" sm="12" xs="12">
+        <v-card>
+          <h1>Bem-vindo</h1>
+          <p>Desenvolvedor Full Stack</p>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -134,20 +196,19 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false;
-    }, 2000);
+    }, 1000);
   },
 };
 </script>
 <style scoped>
 .scroll-card {
   scrollbar-width: thin;
-  max-height: calc(100vh - 73px);
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100%;
-}
-
-.background-card {
+  height: 900px;
+  width: 500px;
   background-color: #dde1e7;
+  position: absolute;
+  left: 10px;
 }
 </style>
