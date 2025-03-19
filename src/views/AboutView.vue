@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid class="pa-0">
     <v-overlay :value="loading ? 'success' : null" :disabled="loading">
       <v-progress-circular
         indeterminate
@@ -10,7 +10,7 @@
       />
     </v-overlay>
     <v-row>
-      <v-col cols="12" md="3" sm="12" xs="12">
+      <v-col cols="9" md="6" sm="9" xs="12">
         <v-sheet rounded shaped>
           <v-card class="scroll-card">
             <v-card-text>
@@ -175,8 +175,8 @@
           </v-card>
         </v-sheet>
       </v-col>
-      <v-col cols="12" md="9" sm="12" xs="12">
-        <v-card>
+      <v-col cols="3" md="6" sm="3" xs="12">
+        <v-card class="scrollable-card">
           <h1>Bem-vindo</h1>
           <p>Desenvolvedor Full Stack</p>
         </v-card>
@@ -208,7 +208,7 @@ export default {
   height: 900px;
   width: 500px;
   background-color: #dde1e7;
-  position: absolute;
-  left: 10px;
+  border-radius: 20px;
+  padding: 2rem;
 }
 </style>
