@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="pa-0">
+  <v-container fluid class="pb-2">
     <v-overlay :value="loading ? 'success' : null" :disabled="loading">
       <v-progress-circular
         indeterminate
@@ -10,7 +10,7 @@
       />
     </v-overlay>
     <v-row>
-      <v-col cols="9" md="6" sm="9" xs="12">
+      <v-col cols="12" md="6" sm="9" xs="12">
         <v-sheet rounded shaped>
           <v-card class="scroll-card">
             <v-card-text>
@@ -22,12 +22,12 @@
                 </v-col>
               </v-row>
               <v-row>
-                <v-col class="d-flex justify-md-center">
+                <v-col md="12" sm="12" xs="12" class="d-flex justify-md-center">
                   <h2>Octávio Santana</h2>
                 </v-col>
               </v-row>
               <v-row>
-                <v-col class="d-flex justify-md-center">
+                <v-col md="12" sm="12" xs="12" class="d-flex justify-md-center">
                   <h3>25 Anos</h3>
                 </v-col>
               </v-row>
@@ -175,10 +175,9 @@
           </v-card>
         </v-sheet>
       </v-col>
-      <v-col cols="3" md="6" sm="3" xs="12">
-        <v-card class="scrollable-card">
-          <h1>Bem-vindo</h1>
-          <p>Desenvolvedor Full Stack</p>
+      <v-col cols="12" md="6" sm="3" xs="12">
+        <v-card class="card-sobre">
+          <h1>Experiências</h1>
         </v-card>
       </v-col>
     </v-row>
@@ -210,5 +209,14 @@ export default {
   background-color: #dde1e7;
   border-radius: 20px;
   padding: 2rem;
+}
+.card-sobre {
+  background-color: #6f859b;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 900px;
+  width: 500px;
+  text-align: center;
+  color: white;
 }
 </style>
