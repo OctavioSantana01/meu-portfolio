@@ -176,17 +176,19 @@
         </v-sheet>
       </v-col>
       <v-col cols="12" md="6" sm="3" xs="12">
-        <v-card class="card-sobre">
-          <h1>Experiências</h1>
-        </v-card>
+        <TrajetoriaView />
       </v-col>
     </v-row>
   </v-container>
 </template>
-<script>
+<script lang="ts">
+import TrajetoriaView from "@/views/Trajetoria.vue";
 export default {
   name: "AboutPage",
 
+  components: {
+    TrajetoriaView,
+  },
   data() {
     return {
       loading: true,
@@ -209,14 +211,5 @@ export default {
   background-color: #dde1e7;
   border-radius: 20px;
   padding: 2rem;
-}
-.card-sobre {
-  background-color: #6f859b;
-  border-radius: 20px;
-  padding: 2rem;
-  height: 900px;
-  width: 500px;
-  text-align: center;
-  color: white;
 }
 </style>
