@@ -25,7 +25,8 @@
 </template>
 
 <script>
-export default {
+import Vue from "vue";
+export default Vue.extend({
   name: "HomePage",
 
   data() {
@@ -50,7 +51,7 @@ export default {
       }, 1000);
     },
   },
-};
+});
 </script>
 
 <style scoped>

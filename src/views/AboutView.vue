@@ -9,7 +9,7 @@
         color="black"
       />
     </v-overlay>
-    <v-row>
+    <v-row class="d-flex">
       <v-col cols="12" xs="12" sm="6" md="6" lg="6">
         <v-sheet rounded shaped>
           <v-card class="scroll-card">
@@ -33,10 +33,10 @@
               </v-row>
               <v-row>
                 <v-col>
-                  <v-list two-line color="customGray">
+                  <v-list two-line color="#dde1e7">
                     <v-list-item>
                       <v-list-item-icon>
-                        <v-icon color="black"> mdi-map-marker </v-icon>
+                        <v-icon color="#0070F3"> mdi-map-marker </v-icon>
                       </v-list-item-icon>
                       <v-list-item-content>
                         <v-list-item-title>
@@ -48,11 +48,11 @@
                       </v-list-item-content>
                     </v-list-item>
                   </v-list>
-                  <v-divider inset></v-divider>
-                  <v-list two-line color="customGray">
+                  <v-divider></v-divider>
+                  <v-list two-line color="#dde1e7">
                     <v-list-item>
                       <v-list-item-icon>
-                        <v-icon color="black"> mdi-phone </v-icon>
+                        <v-icon color="#0070F3"> mdi-phone </v-icon>
                       </v-list-item-icon>
 
                       <v-list-item-content>
@@ -67,7 +67,7 @@
                     <v-divider></v-divider>
                     <v-list-item>
                       <v-list-item-icon>
-                        <v-icon color="black"> mdi-email </v-icon>
+                        <v-icon color="#0070F3"> mdi-email </v-icon>
                       </v-list-item-icon>
 
                       <v-list-item-content>
@@ -82,7 +82,7 @@
                     <v-divider></v-divider>
                     <v-list-item>
                       <v-list-item-icon>
-                        <v-icon color="black">mdi-school </v-icon>
+                        <v-icon color="#0070F3">mdi-school </v-icon>
                       </v-list-item-icon>
 
                       <v-list-item-content>
@@ -100,7 +100,7 @@
                     <v-divider></v-divider>
                     <v-list-item>
                       <v-list-item-icon>
-                        <v-icon color="black">mdi-code-tags </v-icon>
+                        <v-icon color="#0070F3">mdi-code-tags </v-icon>
                       </v-list-item-icon>
 
                       <v-list-item-content>
@@ -113,10 +113,10 @@
                       </v-list-item-content>
                     </v-list-item>
                     <v-divider></v-divider>
-                    <v-list two-line color="customGray">
+                    <v-list two-line color="#dde1e7">
                       <v-list-item>
                         <v-list-item-icon>
-                          <v-icon color="black"> mdi-github </v-icon>
+                          <v-icon color="#0070F3"> mdi-github </v-icon>
                         </v-list-item-icon>
                         <v-list-item-content>
                           <v-list-item-title>
@@ -146,10 +146,10 @@
                       </v-list-item>
                       <v-divider></v-divider>
                     </v-list>
-                    <v-list two-line color="customGray">
+                    <v-list two-line color="#dde1e7">
                       <v-list-item>
                         <v-list-item-icon>
-                          <v-icon color="black"> mdi-linkedin </v-icon>
+                          <v-icon color="#0070F3"> mdi-linkedin </v-icon>
                         </v-list-item-icon>
                         <v-list-item-content>
                           <v-list-item-title>
@@ -175,8 +175,10 @@
           </v-card>
         </v-sheet>
       </v-col>
-      <v-col cols="12" xs="12" sm="6" md="6" lg="6" class="d-flex">
-        <TrajetoriaView />
+      <v-col cols="12" xs="12" sm="6" md="6" lg="6">
+        <div>
+          <TrajetoriaView />
+        </div>
       </v-col>
     </v-row>
     <v-row no-gutters>
@@ -191,7 +193,8 @@
 </template>
 <script lang="ts">
 import TrajetoriaView from "@/views/Trajetoria.vue";
-export default {
+import Vue from "vue";
+export default Vue.extend({
   name: "AboutPage",
 
   components: {
@@ -207,17 +210,18 @@ export default {
       this.loading = false;
     }, 1000);
   },
-};
+});
 </script>
 <style scoped>
 .scroll-card {
   scrollbar-width: thin;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 900px;
   max-width: 500px;
   background-color: #dde1e7;
   border-radius: 20px;
   padding: 2rem;
+  max-height: calc(100vh - 73px);
+  height: 100%;
 }
 </style>
