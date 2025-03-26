@@ -10,7 +10,7 @@
       />
     </v-overlay>
     <v-row>
-      <v-col cols="12" md="6" sm="9" xs="12">
+      <v-col cols="12" xs="12" sm="6" md="6" lg="6">
         <v-sheet rounded shaped>
           <v-card class="scroll-card">
             <v-card-text>
@@ -175,8 +175,16 @@
           </v-card>
         </v-sheet>
       </v-col>
-      <v-col cols="12" md="6" sm="3" xs="12">
+      <v-col cols="12" xs="12" sm="6" md="6" lg="6" class="d-flex">
         <TrajetoriaView />
+      </v-col>
+    </v-row>
+    <v-row no-gutters>
+      <v-col cols="12" sm="6" class="text-center text-sm-left">
+        <span class="subtitle-2"
+          >© {{ new Date().getFullYear() }} Octávio Santana. Todos os direitos
+          reservados.</span
+        >
       </v-col>
     </v-row>
   </v-container>
@@ -207,7 +215,7 @@ export default {
   overflow-y: auto;
   overflow-x: hidden;
   height: 900px;
-  width: 500px;
+  max-width: 500px;
   background-color: #dde1e7;
   border-radius: 20px;
   padding: 2rem;
