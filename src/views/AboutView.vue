@@ -10,7 +10,7 @@
       />
     </v-overlay>
     <v-row class="d-flex">
-      <v-col cols="12" xs="12" sm="6" md="6" lg="6">
+      <v-col cols="12" xs="12" sm="6" md="6" lg="4">
         <v-sheet rounded shaped>
           <v-card class="scroll-card">
             <v-card-text>
@@ -175,9 +175,14 @@
           </v-card>
         </v-sheet>
       </v-col>
-      <v-col cols="12" xs="12" sm="6" md="6" lg="6">
+      <v-col cols="12" xs="12" sm="3" md="3" lg="4">
         <div>
           <TrajetoriaView />
+        </div>
+      </v-col>
+      <v-col cols="12" xs="12" sm="3" md="3" lg="4">
+        <div>
+          <ExperienciaView />
         </div>
       </v-col>
     </v-row>
@@ -194,11 +199,13 @@
 <script lang="ts">
 import TrajetoriaView from "@/views/Trajetoria.vue";
 import Vue from "vue";
+import ExperienciaView from "./ExperienciaView.vue";
 export default Vue.extend({
   name: "AboutPage",
 
   components: {
     TrajetoriaView,
+    ExperienciaView,
   },
   data() {
     return {

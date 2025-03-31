@@ -33,17 +33,16 @@ export default {
   background-color: #6f859b;
   border-radius: 20px;
   padding: 2rem;
-  height: 600px;
-  max-width: 500px;
+  height: 650px;
+  width: 450px;
   text-align: center;
 }
-@media (max-width: 964px) {
-  .scroll-card-trajetoria {
-    scrollbar-width: thin;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+.scroll-card-trajetoria {
+  scrollbar-width: thin;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
 .card-sobre:hover {
   transform: translateY(-15px);
 }

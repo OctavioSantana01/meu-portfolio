@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :class="{ 'sobre-route': $route.path === '/sobre' }">
     <v-app-bar app dark>
       <v-toolbar-title>Meu Portfólio</v-toolbar-title>
       <div class="ml-auto mr-10">
@@ -27,7 +27,7 @@ export default Vue.extend({
   }),
 });
 </script>
-<style lang="css" scoped>
+<style lang="css">
 .botao-rotas:hover {
   background-color: #0070f3;
   transform: scale(1.1);
@@ -37,5 +37,8 @@ export default Vue.extend({
   background-color: #0070f3 !important;
   color: #fff;
   transform: scale(1.1);
+}
+.sobre-route .v-application--wrap {
+  flex: none !important;
 }
 </style>
